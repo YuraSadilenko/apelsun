@@ -1,52 +1,72 @@
 .accordion {
-  max-width: 560px;
-  margin: 0 auto 100px;
-  border-top: 1px solid #d9e5e8;
+  max-width: 100%;
+  margin: 0 auto;
+
+  &__item {
+    position: relative;
+    background-color: #fff;
+    
+  }
+
+  &__name {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 3;
+    font-weight: 800;
+    font-size: 2rem;
+    text-indent: 15px;
+    user-select: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: $gray-color;
+
+    &--agrotechnics {
+        background: url(../img/agrotechnic.jpg);
+        background-position: center;
+        background-size: cover;
+
+        &:visited,
+        &:active {
+          z-index: -1;
+        }
+      }
+
+      &--light-transport {
+        background: url(../img/light-car.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+
+      &--transfers {
+        background: url(../img/light-car.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+      &--spec-tech {
+        background: url(../img/spec-technic.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+
+      &--railway {
+        background: url(../img/railway-transport.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+  }
+
+  &__description {
+    font-size: 1.5rem;
+    line-height: 2;
+    padding: 10px;
+
+  }
+
 }
-.accordion li {
-  border-bottom: 1px solid #d9e5e8;
-  position: relative;
-}
+
 .accordion li p {
   display: none;
   padding: 10px 25px 30px;
-  color: #6b97a4;
-}
-.accordion a {
-  width: 100%;
-  display: block;
-  cursor: pointer;
-  font-weight: 600;
-  line-height: 3;
-  font-size: 14px;
-  font-size: 0.875rem;
-  text-indent: 15px;
-  user-select: none;
-}
-.accordion a:after {
-  width: 8px;
-  height: 8px;
-  border-right: 1px solid #4a6e78;
-  border-bottom: 1px solid #4a6e78;
-  position: absolute;
-  right: 10px;
-  content: " ";
-  top: 17px;
-  transform: rotate(-45deg);
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-.accordion p {
-  font-size: 13px;
-  font-size: 0.8125rem;
-  line-height: 2;
-  padding: 10px;
-}
-
-a.active:after {
-  transform: rotate(45deg);
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
 }

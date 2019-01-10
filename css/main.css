@@ -8,7 +8,9 @@ html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */ }
+  /* 2 */
+  box-sizing: border-box;
+  font-size: 10px; }
 
 /* Sections
    ========================================================================== */
@@ -16,7 +18,8 @@ html {
  * Remove the margin in all browsers.
  */
 body {
-  margin: 0; }
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif; }
 
 /**
  * Render the `main` element consistently in IE.
@@ -303,52 +306,109 @@ template {
   display: none; }
 
 .accordion {
-  max-width: 560px;
-  margin: 0 auto 100px;
-  border-top: 1px solid #d9e5e8; }
-
-.accordion li {
-  border-bottom: 1px solid #d9e5e8;
-  position: relative; }
+  max-width: 100%;
+  margin: 0 auto; }
+  .accordion__item {
+    position: relative;
+    background-color: #fff; }
+  .accordion__name {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 3;
+    font-weight: 800;
+    font-size: 2rem;
+    text-indent: 15px;
+    user-select: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: #b3b3b3; }
+    .accordion__name--agrotechnics {
+      background: url(../img/agrotechnic.jpg);
+      background-position: center;
+      background-size: cover; }
+      .accordion__name--agrotechnics:visited, .accordion__name--agrotechnics:active {
+        z-index: -1; }
+    .accordion__name--light-transport {
+      background: url(../img/light-car.jpg);
+      background-position: center;
+      background-size: cover; }
+    .accordion__name--transfers {
+      background: url(../img/light-car.jpg);
+      background-position: center;
+      background-size: cover; }
+    .accordion__name--spec-tech {
+      background: url(../img/spec-technic.jpg);
+      background-position: center;
+      background-size: cover; }
+    .accordion__name--railway {
+      background: url(../img/railway-transport.jpg);
+      background-position: center;
+      background-size: cover; }
+  .accordion__description {
+    font-size: 1.5rem;
+    line-height: 2;
+    padding: 10px; }
 
 .accordion li p {
   display: none;
-  padding: 10px 25px 30px;
-  color: #6b97a4; }
+  padding: 10px 25px 30px; }
 
-.accordion a {
-  width: 100%;
+.section-info {
+  padding: 4rem 0 2rem; }
+  .section-info__heading {
+    padding: 0 2rem;
+    margin-bottom: 3rem; }
+    .section-info__heading-item {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #383838;
+      text-align: center; }
+  .section-info__description {
+    padding: 0 2rem;
+    margin-bottom: 3rem; }
+    .section-info__description-item {
+      font-size: 1.4rem;
+      font-weight: 600;
+      line-height: 1.5;
+      color: #383838;
+      text-align: center; }
+  .section-info__companies {
+    padding: 0 3rem;
+    margin-bottom: 3rem; }
+
+.companies__img {
+  width: 110%; }
+
+.companies-first {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 3rem; }
+
+.companies-second {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 3rem; }
+
+.companies-third {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 3rem; }
+
+.btn {
   display: block;
-  cursor: pointer;
-  font-weight: 600;
-  line-height: 3;
-  font-size: 14px;
-  font-size: 0.875rem;
-  text-indent: 15px;
-  user-select: none; }
-
-.accordion a:after {
-  width: 8px;
-  height: 8px;
-  border-right: 1px solid #4a6e78;
-  border-bottom: 1px solid #4a6e78;
-  position: absolute;
-  right: 10px;
-  content: " ";
-  top: 17px;
-  transform: rotate(-45deg);
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
-
-.accordion p {
-  font-size: 13px;
-  font-size: 0.8125rem;
-  line-height: 2;
-  padding: 10px; }
-
-a.active:after {
-  transform: rotate(45deg);
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
+  width: 70%;
+  text-align: center;
+  padding: 1.6rem 0;
+  background: #1c7fff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-transform: uppercase; }
+  .btn--center {
+    margin: auto; }

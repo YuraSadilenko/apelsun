@@ -1,7 +1,7 @@
 {
-  "name": "apelsun",
+  "name": "apelun",
   "version": "1.0.0",
-  "description": "",
+  "description": "apelsun test task",
   "main": "index.js",
   "dependencies": {
     "arr-filter": "^1.1.2",
@@ -70,6 +70,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "yura",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuraSadilenko/apelsun.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YuraSadilenko/apelsun/issues"
+  },
+  "homepage": "https://github.com/YuraSadilenko/apelsun#readme"
 }
