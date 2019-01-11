@@ -2,10 +2,43 @@
   max-width: 100%;
   margin: 0 auto;
 
+  @include respond(tab-port) {
+
+  }
+
   &__item {
     position: relative;
     background-color: #fff;
+
+    &--agrotechnics {
+      background: url(../img/agrotechnic.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--light-transport {
+      background: url(../img/light-car.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--transfers {
+      background: url(../img/light-car.jpg);
+      background-position: center;
+      background-size: cover;
+    }
     
+    &--spec-tech {
+      background: url(../img/spec-technic.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--railway {
+      background: url(../img/railway-transport.jpg);
+      background-position: center;
+      background-size: cover;
+    }
   }
 
   &__name {
@@ -22,48 +55,21 @@
     text-align: center;
     color: $gray-color;
 
-    &--agrotechnics {
-        background: url(../img/agrotechnic.jpg);
-        background-position: center;
-        background-size: cover;
+    @include respond(tab-port) {
+      transform-origin: top bottom;
+    }
 
-        &:visited,
-        &:active {
-          z-index: -1;
-        }
-      }
-
-      &--light-transport {
-        background: url(../img/light-car.jpg);
-        background-position: center;
-        background-size: cover;
-      }
-
-      &--transfers {
-        background: url(../img/light-car.jpg);
-        background-position: center;
-        background-size: cover;
-      }
-      &--spec-tech {
-        background: url(../img/spec-technic.jpg);
-        background-position: center;
-        background-size: cover;
-      }
-
-      &--railway {
-        background: url(../img/railway-transport.jpg);
-        background-position: center;
-        background-size: cover;
-      }
   }
 
   &__description {
     font-size: 1.5rem;
     line-height: 2;
     padding: 10px;
+    background: rgba(white, 0.6);
 
+    @include respond(tab-port) {
+    }
   }
-
 }
 
 .accordion li p {

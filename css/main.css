@@ -311,6 +311,26 @@ template {
   .accordion__item {
     position: relative;
     background-color: #fff; }
+    .accordion__item--agrotechnics {
+      background: url(../img/agrotechnic.jpg);
+      background-position: center;
+      background-size: cover; }
+    .accordion__item--light-transport {
+      background: url(../img/light-car.jpg);
+      background-position: center;
+      background-size: cover; }
+    .accordion__item--transfers {
+      background: url(../img/light-car.jpg);
+      background-position: center;
+      background-size: cover; }
+    .accordion__item--spec-tech {
+      background: url(../img/spec-technic.jpg);
+      background-position: center;
+      background-size: cover; }
+    .accordion__item--railway {
+      background: url(../img/railway-transport.jpg);
+      background-position: center;
+      background-size: cover; }
   .accordion__name {
     width: 100%;
     display: block;
@@ -324,39 +344,24 @@ template {
     text-transform: uppercase;
     text-align: center;
     color: #b3b3b3; }
-    .accordion__name--agrotechnics {
-      background: url(../img/agrotechnic.jpg);
-      background-position: center;
-      background-size: cover; }
-      .accordion__name--agrotechnics:visited, .accordion__name--agrotechnics:active {
-        z-index: -1; }
-    .accordion__name--light-transport {
-      background: url(../img/light-car.jpg);
-      background-position: center;
-      background-size: cover; }
-    .accordion__name--transfers {
-      background: url(../img/light-car.jpg);
-      background-position: center;
-      background-size: cover; }
-    .accordion__name--spec-tech {
-      background: url(../img/spec-technic.jpg);
-      background-position: center;
-      background-size: cover; }
-    .accordion__name--railway {
-      background: url(../img/railway-transport.jpg);
-      background-position: center;
-      background-size: cover; }
+    @media (min-width: 32.1rem) {
+      .accordion__name {
+        transform-origin: top bottom; } }
   .accordion__description {
     font-size: 1.5rem;
     line-height: 2;
-    padding: 10px; }
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.6); }
 
 .accordion li p {
   display: none;
   padding: 10px 25px 30px; }
 
 .section-info {
-  padding: 4rem 0 2rem; }
+  padding: 4rem 0 4rem; }
+  @media (min-width: 32.1rem) {
+    .section-info {
+      display: flex; } }
   .section-info__heading {
     padding: 0 2rem;
     margin-bottom: 3rem; }
@@ -377,6 +382,9 @@ template {
   .section-info__companies {
     padding: 0 3rem;
     margin-bottom: 3rem; }
+    @media (min-width: 32.1rem) {
+      .section-info__companies {
+        width: 100%; } }
 
 .companies__img {
   width: 110%; }
@@ -409,6 +417,22 @@ template {
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: 800;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .4s; }
+  @media (min-width: 32.1rem) {
+    .btn {
+      width: 40%; } }
+  @media (min-width: 76.8rem) {
+    .btn {
+      width: 30%; }
+      .btn:hover {
+        transform: translateY(-0.4rem);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
+      .btn:active, .btn:visited {
+        transform: translateY(-0.2rem);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); } }
   .btn--center {
     margin: auto; }
+  .btn-block {
+    padding: 0 0 2rem 0; }
