@@ -38,5 +38,9 @@
 
   &-block {
     padding: 0 0 2rem 0;
+
+    @include respond(desktop) {
+      display: none;
+    }
   }
 }

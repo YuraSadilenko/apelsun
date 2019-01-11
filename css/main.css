@@ -308,9 +308,15 @@ template {
 .accordion {
   max-width: 100%;
   margin: 0 auto; }
+  @media (min-width: 102.4rem) {
+    .accordion {
+      display: flex; } }
   .accordion__item {
     position: relative;
     background-color: #fff; }
+    @media (min-width: 102.4rem) {
+      .accordion__item {
+        display: inline-block; } }
     .accordion__item--agrotechnics {
       background: url(../img/agrotechnic.jpg);
       background-position: center;
@@ -320,7 +326,7 @@ template {
       background-position: center;
       background-size: cover; }
     .accordion__item--transfers {
-      background: url(../img/light-car.jpg);
+      background: url(../img/heavy_transfers.jpeg);
       background-position: center;
       background-size: cover; }
     .accordion__item--spec-tech {
@@ -344,9 +350,6 @@ template {
     text-transform: uppercase;
     text-align: center;
     color: #b3b3b3; }
-    @media (min-width: 32.1rem) {
-      .accordion__name {
-        transform-origin: top bottom; } }
   .accordion__description {
     font-size: 1.5rem;
     line-height: 2;
@@ -385,6 +388,17 @@ template {
     @media (min-width: 32.1rem) {
       .section-info__companies {
         width: 100%; } }
+    @media (max-width: 76rem) {
+      .section-info__companies--colored-block {
+        display: none; } }
+    @media (min-width: 102.4rem) {
+      .section-info__companies--colored-block {
+        display: block; } }
+    .section-info__companies--gray-block {
+      display: none; }
+      @media (max-width: 76rem) {
+        .section-info__companies--gray-block {
+          display: block; } }
 
 .companies__img {
   width: 110%; }
@@ -423,7 +437,7 @@ template {
   @media (min-width: 32.1rem) {
     .btn {
       width: 40%; } }
-  @media (min-width: 76.8rem) {
+  @media (min-width: 102.4rem) {
     .btn {
       width: 30%; }
       .btn:hover {
@@ -436,3 +450,6 @@ template {
     margin: auto; }
   .btn-block {
     padding: 0 0 2rem 0; }
+    @media (min-width: 102.4rem) {
+      .btn-block {
+        display: none; } }

@@ -2,13 +2,18 @@
   max-width: 100%;
   margin: 0 auto;
 
-  @include respond(tab-port) {
-
+  @include respond(desktop) {
+    display: flex;
   }
 
   &__item {
     position: relative;
     background-color: #fff;
+
+    @include respond(desktop) {
+      display: inline-block;
+    }
+  
 
     &--agrotechnics {
       background: url(../img/agrotechnic.jpg);
@@ -23,7 +28,7 @@
     }
 
     &--transfers {
-      background: url(../img/light-car.jpg);
+      background: url(../img/heavy_transfers.jpeg);
       background-position: center;
       background-size: cover;
     }
@@ -56,7 +61,6 @@
     color: $gray-color;
 
     @include respond(tab-port) {
-      transform-origin: top bottom;
     }
 
   }

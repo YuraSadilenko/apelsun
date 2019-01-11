@@ -41,6 +41,23 @@
     @include respond(tab-port) {
       width: 100%;
     }
+    
+    &--colored-block {
+      @include respond(small-ports) {
+        display: none;
+      }
+      
+      @include respond(desktop) {
+        display: block;
+      }  
+    }
+    &--gray-block {
+      display: none;
+      @include respond(small-ports) {
+        display: block;
+      }
+    }
+    
   }
 
 }
@@ -73,3 +90,4 @@
   }
 
 }
+
