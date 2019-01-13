@@ -1,6 +1,9 @@
+main {
+  padding-bottom: 4rem;
+}
+
 .btn {
-  display: block;
-  width: 70%;
+  width: 90%;
   text-align: center;
   padding: 1.6rem 0;
   background: $btn-bg;
@@ -11,36 +14,48 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: all .4s;
-  @include respond(tab-port) {
-    width: 40%;
-  }
-
-  @include respond(desktop) {
-    width: 30%;
-
-    &:hover {
-      transform: translateY(-.4rem);
-      box-shadow: 0 1rem 2rem rgba(0,0,0, .3);
-    }
-
-    &:active,
-    &:visited {
-      transform: translateY(-.2rem);
-      box-shadow: 0 .5rem 1rem rgba(0,0,0, .3);
-
-    }
-  }
-
 
   &--center {
     margin: auto;
   }
 
-  &-block {
-    padding: 0 0 2rem 0;
+
+  &:hover {
+    transform: translateY(-.4rem);
+    box-shadow: 0 1rem 2rem rgba(0,0,0, .3);
+  }
+
+  &:active,
+  &:visited {
+    transform: translateY(-.2rem);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .3);
+
+  }
+
+  @include respond(tab-port) {
+    width: 50%;
+  }
+
+  @include respond(desktop) {
+    width: 30%;
+
+  }
+
+  &__desk {
+    display: none;
+    
+    @include respond(desktop) {
+      display: block;
+      width: 80%;
+    }
+  }
+
+  &__mobile {
+    display: block;
 
     @include respond(desktop) {
       display: none;
     }
   }
+
 }
