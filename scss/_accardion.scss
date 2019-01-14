@@ -81,6 +81,7 @@
       display: block;
       padding-left: 5%; 
 
+
       &::before {
         content: "";
         position: absolute;
@@ -97,6 +98,10 @@
       @include respond(small-paddings) {
         padding-left: 10%; 
       }
+      @include respond(desktop) {
+        padding-left: 12%; 
+      }
+
     }
   }
 }

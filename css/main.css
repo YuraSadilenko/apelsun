@@ -416,6 +416,9 @@ template {
       @media (max-width: 30rem) {
         .accordion__description--item {
           padding-left: 10%; } }
+      @media (min-width: 1200px) {
+        .accordion__description--item {
+          padding-left: 12%; } }
 
 .accordion li p {
   display: none;
