@@ -4,11 +4,19 @@
       @content;
     }
   }
+
+  @if $breakpoint == small-paddings { //paddings for small viewports (mobile and small tabs)
+    @media (max-width: 30rem) {
+      @content;
+    }
+  }
+
   @if $breakpoint == tab-port {
     @media (min-width: 320px) {
       @content;
     }
   }
+
   @if $breakpoint == desktop {
     @media (min-width: 1200px) {
       @content;

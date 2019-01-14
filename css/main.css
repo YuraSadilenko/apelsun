@@ -305,18 +305,56 @@ template {
 [hidden] {
   display: none; }
 
+#popup {
+  display: none; }
+
+.modal-box {
+  position: fixed;
+  max-width: 65rem;
+  min-width: 30rem;
+  height: auto;
+  font-size: 2.5rem;
+  background-color: #919191;
+  padding: 6rem 8rem;
+  letter-spacing: .1rem;
+  border-radius: 20px;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.4); }
+  @media (max-width: 76.8em) {
+    .modal-box {
+      width: 90%; } }
+  .modal-box__esc {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: inline-block;
+    padding: 0 .5rem;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 1s; }
+    .modal-box__esc:hover {
+      background-color: #fff;
+      color: #24e9f7; }
+
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
 .accordion {
   max-width: 100%;
   margin: 0 auto; }
   @media (min-width: 1200px) {
     .accordion {
-      display: flex; } }
+      display: flex;
+      width: 100%; } }
   .accordion__item {
     position: relative;
     background-color: #fff; }
     @media (min-width: 1200px) {
       .accordion__item {
-        display: inline-block; } }
+        display: inline-block;
+        width: 100%; } }
     .accordion__item--agrotechnics {
       background: url(../img/agrotechnic.jpg);
       background-position: center;
@@ -349,16 +387,42 @@ template {
     user-select: none;
     text-transform: uppercase;
     text-align: center;
-    color: #b3b3b3; }
+    color: #b3b3b3;
+    z-index: 1000; }
   .accordion__description {
     font-size: 1.5rem;
     line-height: 2;
     padding: 10px;
-    background: rgba(255, 255, 255, 0.6); }
+    background: rgba(255, 255, 255, 0.6);
+    margin-top: -60px; }
+    .accordion__description--item-head {
+      font-weight: 800;
+      display: block; }
+    .accordion__description--item {
+      position: relative;
+      display: block;
+      padding-left: 5%; }
+      .accordion__description--item::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: #1c7fff;
+        border-radius: 100px;
+        top: 0;
+        left: 0;
+        transform: translate(50%, 90%); }
+      @media (max-width: 30rem) {
+        .accordion__description--item {
+          padding-left: 10%; } }
 
 .accordion li p {
   display: none;
-  padding: 10px 25px 30px; }
+  padding: 10rem 10% 3rem; }
+
+.active {
+  color: black; }
 
 .section-info {
   padding: 4rem 0 4rem;
@@ -389,10 +453,11 @@ template {
       text-align: center; }
       @media (min-width: 1200px) {
         .section-info__description-item {
-          margin-bottom: 4rem; } }
+          margin-bottom: 8rem; } }
   .section-info__companies {
     padding: 0 3rem;
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    outline: 0; }
     @media (min-width: 320px) {
       .section-info__companies {
         width: 100%; } }
@@ -407,6 +472,12 @@ template {
       @media (max-width: 76rem) {
         .section-info__companies--gray-block {
           display: block; } }
+
+.companies__link {
+  display: block;
+  transition: all .3s; }
+  .companies__link:hover {
+    transform: translateY(-8px) rotate(10deg) scale(1.2); }
 
 .companies__img {
   width: 110%; }
@@ -443,7 +514,9 @@ main {
   font-weight: 800;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all .4s; }
+  transition: all .3s;
+  outline: none;
+  border: 0; }
   .btn--center {
     margin: auto; }
   .btn:hover {
@@ -451,7 +524,8 @@ main {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
   .btn:active, .btn:visited {
     transform: translateY(-0.2rem);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); }
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    transition: .1s; }
   @media (min-width: 320px) {
     .btn {
       width: 50%; } }

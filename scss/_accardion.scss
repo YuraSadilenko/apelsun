@@ -4,6 +4,7 @@
 
   @include respond(desktop) {
     display: flex;
+    width: 100%;
   }
 
   &__item {
@@ -12,8 +13,8 @@
 
     @include respond(desktop) {
       display: inline-block;
+      width: 100%;
     }
-  
 
     &--agrotechnics {
       background: url(../img/agrotechnic.jpg);
@@ -59,10 +60,7 @@
     text-transform: uppercase;
     text-align: center;
     color: $gray-color;
-
-    @include respond(tab-port) {
-    }
-
+    z-index: 1000;
   }
 
   &__description {
@@ -70,13 +68,44 @@
     line-height: 2;
     padding: 10px;
     background: rgba(white, 0.6);
+    margin-top: -60px;
 
-    @include respond(tab-port) {
+    &--item-head {
+      font-weight: 800;
+      display: block;
+
+    }
+
+    &--item {
+      position: relative;
+      display: block;
+      padding-left: 5%; 
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: #1c7fff;
+        border-radius: 100px;
+        top: 0;
+        left: 0;
+        transform: translate(50%, 90%);
+        
+      }
+      @include respond(small-paddings) {
+        padding-left: 10%; 
+      }
     }
   }
 }
 
 .accordion li p {
   display: none;
-  padding: 10px 25px 30px;
+  padding: 10rem 10% 3rem;
+}
+
+.active {
+  color: black;
 }
